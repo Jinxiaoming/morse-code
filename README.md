@@ -3,10 +3,9 @@ Welcome to the International Morse Code Translator by Rick Flores.
 This is an interactive application that translates raw morse code into readable text.
 It supports the entire alphabet A-Z, and numbers 0-9. It also supports colorized output with the rainbow gem.
 
+![Screenshot](http://s7.postimg.org/u3u0y181n/Screen_Shot_2013_05_12_at_1_01_39_AM.png)
 
 ![Screenshot](http://upload.wikimedia.org/wikipedia/commons/b/b5/International_Morse_Code.svg)
-
-![Screenshot](http://s7.postimg.org/u3u0y181n/Screen_Shot_2013_05_12_at_1_01_39_AM.png)
 
 ## Pre Reqs
 
