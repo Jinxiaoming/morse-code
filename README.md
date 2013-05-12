@@ -6,7 +6,7 @@ It supports the entire alphabet A-Z, and numbers 0-9. It also supports colorized
 
 ![Screenshot](http://upload.wikimedia.org/wikipedia/commons/b/b5/International_Morse_Code.svg)
 
-![Screenshot](http://postimg.org/image/3viw8nnxz/full/)
+![Screenshot](http://s7.postimg.org/u3u0y181n/Screen_Shot_2013_05_12_at_1_01_39_AM.png)
 
 ## Pre Reqs
 
