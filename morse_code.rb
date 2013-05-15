@@ -23,14 +23,17 @@ end
 # Accept user input ::: // new addition added by Rick Flores
 banner()
 print "[!] Remember: SOS is the standard Morse code emergency distress signal...\n".foreground(:red).bright
-print "[!] Example: ... --- ... => S O S\n".foreground(:yellow).bright
-print "[!] Example: -.-. .- .-.. .-.. ----. .---- .---- => C A L L 9 1 1\n".foreground(:yellow).bright
+print "[!] Example: ... --- ... > S O S\n".foreground(:yellow).bright
+print "[!] Example: -.-. .- .-.. .-.. # ----. .---- .---- > CALL 911\n".foreground(:yellow).bright
+print "[!] Example: .. # .-.. --- ...- . # -.-- --- ..-   > I LOVE YOU\n".foreground(:yellow).bright
 print "[!] NOTE: This program accepts all letters A-Z, and numbers 0-9\n".foreground(:yellow).bright
-print "[+] Enter the morse code you wish to decipher (seperate *EACH letter with a space per the example above) >".foreground(:white).bright
+print "[+] Seperate *EACH letter with a space per the example above)\n".foreground(:white).bright
+print "[+] Seperate *EACH word with a # symbol plus a space per the example above)\n".foreground(:white).bright
+print "[+] Enter the morse code you wish to translate > ".foreground(:white).bright
 
-decrypt = STDIN.gets.chomp
+input = STDIN.gets.chomp
 
-v = {	
+v = {
 	'.-' 	=> 'A',	
 	'-...' 	=> 'B',	
 	'-.-.' 	=> 'C',	
@@ -66,14 +69,16 @@ v = {
   	'--...' => '7',
   	'---..' => '8',
   	'----.' => '9',
-  	'-----' => '0'
+  	'-----' => '0',
+  	'#' => ' '
 } 
 
-decipher	= "#{decrypt}"
-words		= decipher.split '  ' 
-code		= words.map do |w|	
-		w.split(' ').map {|morse_letter| v[morse_letter] }.join(" ")
-end 
+code		= input.split(' ')
+words		= code.map do |w|
 
-puts "Morse code has been translated to:.".foreground(:white).bright
-puts code.join' '
+w.split(' ').map {|morse_letter| v[morse_letter] }
+end
+
+sentence = words.join
+puts "\nThe morse code you entered ".foreground(:white).bright + code.join + " has been translated to: ".foreground(:white).bright + words.join
+`say #{sentence}`
