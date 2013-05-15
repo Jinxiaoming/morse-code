@@ -70,7 +70,8 @@ v = {
   	'---..' => '8',
   	'----.' => '9',
   	'-----' => '0',
-  	'#' => ' '
+  	'#' => ' ' # My co-worker Mark Thorson gave me this idea if adding the # symbol as a whitespace character
+                   # That solved the isue of the extra spaces with previous versions. Thanks Mr. Habanero!
 } 
 
 code		= input.split(' ')
