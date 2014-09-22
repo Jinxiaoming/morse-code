@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'rainbow'
+require 'rainbow/ext/string'
 #Ref: http://basgys.tumblr.com/post/19888399588/a-ruby-morse-code-interpreter // original code
 # I simply added the acceptance of user input vs having the "HELP ME OUT OF THIS WELL" string hardcoded into the prgoram.
 # I also added the ability to include numbers 0..9 in the script as well.
